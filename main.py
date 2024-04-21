@@ -4,6 +4,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+import nltk
+
+nltk.download('punkt')
+nltk.download('stopwords')
+
 from service import calculate_similarity, calculate_similarity_naive
 
 app = FastAPI()

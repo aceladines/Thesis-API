@@ -2,15 +2,12 @@ import xxhash
 from pyxorfilter import Xor16
 import spacy
 import re
-import nltk
 from nltk.tokenize import word_tokenize
 
-nltk.download('punkt')
-nltk.download('stopwords')
+sp = spacy.load('en_core_web_sm')
 
 def lemmatize_text(input_text):
     if isinstance(input_text, str):
-        sp = spacy.load('en_core_web_sm')
         all_stopwords = sp.Defaults.stop_words
 
         # Tokenize the input text

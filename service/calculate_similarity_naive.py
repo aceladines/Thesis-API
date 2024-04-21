@@ -1,11 +1,5 @@
 import spacy
-import nltk
 from nltk.tokenize import word_tokenize
-import re
-
-
-nltk.download('punkt')
-nltk.download('stopwords')
 
 def remove_stopwords(input_text):
     if isinstance(input_text, str):
