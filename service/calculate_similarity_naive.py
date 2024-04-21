@@ -54,6 +54,9 @@ def calculate_similarity_score(doc1: str, doc2: str) -> dict:
          
         m = len(pattern)
 
+        if m > n:
+           continue
+
         for i in range(m-1):      
             h = (h*d) % q
 
